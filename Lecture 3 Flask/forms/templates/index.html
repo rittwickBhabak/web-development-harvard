@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+
+{% block heading %} Enter your name below {% endblock %}
+
+{% block body %}
+<form action="{{ url_for('hello') }}" method="post">
+    <input type="text" name="name" id="name" placeholder="Enter your name">
+    <input type="submit" value="Submit">
+</form>
+<h3>Hi form</h3>
+<form action="{{ url_for('hi') }}" method="post">
+    <input type="text" name="name" id="hiname" placeholder="Enter your name">
+    <input type="submit" value="Submit">
+</form>
+
+
+{% endblock %}
